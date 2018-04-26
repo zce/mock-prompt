@@ -1,0 +1,42 @@
+{
+  "name": "mock-prompt",
+  "version": "0.1.0",
+  "description": "mock inquirer prompt",
+  "keywords": [
+    "zce"
+  ],
+  "homepage": "https://github.com/zce/mock-prompt#readme",
+  "bugs": {
+    "url": "https://github.com/zce/mock-prompt/issues"
+  },
+  "license": "MIT",
+  "author": "zce <w@zce.me> (https://zce.me/)",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "example": "example",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zce/mock-prompt.git"
+  },
+  "scripts": {
+    "lint": "standard --fix",
+    "test": "npm run lint && nyc ava"
+  },
+  "dependencies": {
+    "inquirer": "^5.2.0"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "nyc": "^11.3.0",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
