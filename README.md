@@ -9,42 +9,45 @@
 [![devDependency Status][devdependency-image]][devdependency-url]
 [![Code Style][style-image]][style-url]
 
-> mock inquirer prompt
+> mock inquirer prompt for unit/e2e test
 
 ## Installation
 
 ```shell
-$ yarn add mock-prompt
+$ yarn add mock-prompt --dev
 
 # or npm
-$ npm install mock-prompt
+$ npm install mock-prompt --save-dev
 ```
 
 ## Usage
 
 ```javascript
+const inquirer = require('inquirer')
 const mockPrompt = require('mock-prompt')
-const result = mockPrompt('zce')
-console.log(result)
-// => 'zce@zce.me'
+
+mockPrompt({ foo: 'hello foo' })
+
+const questions = [
+  { name: 'foo', type: 'input', message: 'foo' },
+  { name: 'bar', type: 'confirm', message: 'bar', default: false }
+]
+
+inquirer.prompt(questions)
+  .then(answers => {
+    console.log(answers)
+    // => { foo: 'hello foo', bar: false }
+  })
 ```
 
 ## API
 
-### mockPrompt(name[, options])
+### mockPrompt(fills)
 
-#### name
+#### fills
 
-- Type: `string`
-- Details: name string
-
-#### options
-
-##### host
-
-- Type: `string`
-- Details: host string
-- Default: `'zce.me'`
+- Type: `object`
+- Details: fill answers
 
 ## Contributing
 
@@ -59,7 +62,7 @@ console.log(result)
 
 ## License
 
-[MIT](LICENSE) &copy; zce <w@zce.me> (https://zce.me/)
+[MIT](LICENSE) &copy; [汪磊](https://zce.me/)
 
 
 
