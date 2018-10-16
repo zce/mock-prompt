@@ -56,7 +56,7 @@ test.serial('validate', async t => {
 
   t.is(message, 'hello')
 
-  await t.throws(inquirer.prompt({
+  await t.throwsAsync(inquirer.prompt({
     name: 'message',
     type: 'input',
     message: 'message',
