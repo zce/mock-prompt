@@ -29,7 +29,7 @@
     "test": "yarn lint && nyc ava"
   },
   "dependencies": {
-    "inquirer": "^6.2.2"
+    "inquirer": "^7.0.0"
   },
   "devDependencies": {
     "ava": "2.3.0",
