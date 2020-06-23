@@ -4,7 +4,6 @@ language: node_js
 
 node_js:
   - lts/*
-  - node
 
 notifications:
   email:
@@ -12,10 +11,10 @@ notifications:
     on_failure: change
 
 before_script:
-  - yarn global add nyc codecov
+  - npm i nyc codecov --global
 
 script:
-  - yarn test
+  - npm run test
 
 after_script:
   - nyc report --reporter=text-lcov > coverage.lcov && codecov

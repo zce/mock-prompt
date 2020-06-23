@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.5] - 2020-06-23
+
+- peerDependencies: inquirer
+
 ## [0.1.4] - 2019-02-13
 
 - :arrow_up: Upgraded deps

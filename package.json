@@ -25,16 +25,16 @@
     "url": "git+https://github.com/zce/mock-prompt.git"
   },
   "scripts": {
-    "lint": "standard --fix",
-    "test": "yarn lint && nyc ava"
+    "test": "standard --fix && nyc ava"
   },
-  "dependencies": {
-    "inquirer": "^7.0.0"
+  "peerDependencies": {
+    "inquirer": "^7.2.0"
   },
   "devDependencies": {
-    "ava": "2.4.0",
-    "nyc": "14.1.1",
-    "standard": "14.3.1"
+    "ava": "3.9.0",
+    "inquirer": "7.2.0",
+    "nyc": "15.1.0",
+    "standard": "14.3.4"
   },
   "engines": {
     "node": ">=8"

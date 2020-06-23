@@ -1,9 +1,9 @@
-import test from 'ava'
-import inquirer from 'inquirer'
-import mockPrompt from '..'
+const test = require('ava')
+const inquirer = require('inquirer')
+const mockPrompt = require('..')
 
 test.serial('error', async t => {
-  t.throws(() => mockPrompt(), TypeError)
+  t.throws(() => mockPrompt(), { instanceOf: TypeError })
 })
 
 test.serial('normal', async t => {
@@ -60,8 +60,8 @@ test.serial('validate', async t => {
     name: 'message',
     type: 'input',
     message: 'message',
-    validate: input => 'validate error'
-  }), 'validate error')
+    validate: () => 'validate error'
+  }), { message: 'validate error' })
 
   stop()
 })

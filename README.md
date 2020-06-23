@@ -11,6 +11,10 @@
 
 > mock inquirer prompt for unit/e2e test
 
+## TODO
+
+Make sure the inquirer instance is one.
+
 ## Installation
 
 ```shell
