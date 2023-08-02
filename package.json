@@ -28,11 +28,11 @@
     "test": "standard --fix && nyc ava"
   },
   "peerDependencies": {
-    "inquirer": "^7.2.0"
+    "inquirer": "^7.2.0 || ^8.0.0"
   },
   "devDependencies": {
     "ava": "3.9.0",
-    "inquirer": "7.2.0",
+    "inquirer": "8.2.6",
     "nyc": "15.1.0",
     "standard": "14.3.4"
   },
